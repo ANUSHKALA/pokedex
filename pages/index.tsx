@@ -9,7 +9,7 @@ import PokemonLister from "../components/PokemonLister";
 export async function getServerSideProps(context){
     const limit = 60;
     const pageNumber = context.query?.page || 0;
-    let allData = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=500&offset=${pageNumber*limit}`).then(res => res.json())
+    let allData = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=50&offset=${pageNumber*limit}`).then(res => res.json())
     console.log("allData \n",allData["results"])
     if(context.query?.keyword)
         allData["results"] = allData["results"].filter(pokemon => pokemon.name.toLowerCase().startsWith(context.query.keyword.toLowerCase()));
