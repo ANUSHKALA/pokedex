@@ -46,24 +46,22 @@ const PokePage = (props) => {
         <div>
             {/*<AppView title='gj'></AppView>*/}
             <AppView title={props.pokemon.name} pageType=''>
-                <div className="flex justify-center">
-                    <div className="py-60">
-                        <h1 className="text-center text-gray-800 text-5xl capitalize px-auto py-10">
-                            {props.pokemon.name}
-                        </h1>
-                        <div className="mx-auto">
+                <div className="  flex items-center justify-center">
+                    <div className=" flex flex-wrap my-20 ">
+                        <div className="mr-20 ml-10 py-10">
                             <    // @ts-ignore
                                 img src={props.pokemon.sprites.other.dream_world.front_default} className="mx-auto"/>
                         </div>
-                        <div className="ml-4 my-auto pl-30 text-2xl pt-3 text-gray-700 capitalize">
-                            <br/>
-                            Weight: { props.pokemon.weight}
-                            <br />
-                            Height: {props.pokemon.height}
-                            <br />
-                            Type: {props.pokemon.types[0].type.name}
-                            <br />
-                            Abilities: {abilities + " "}
+                        <div className="text-justify">
+                            <h1 className="text-justify text-gray-800 text-5xl capitalize px-auto p-10">
+                                {props.pokemon.name}
+                            </h1>
+                            <div className="text-justify text-gray-800 text-2xl capitalize px-auto p-10">
+                                <p>Weight: { props.pokemon.weight}</p>
+                                <p>Height: {props.pokemon.height}</p>
+                                <p>Type: {props.pokemon.types[0].type.name}</p>
+                                <p>Abilities: {abilities + " "}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
